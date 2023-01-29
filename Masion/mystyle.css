@@ -1,0 +1,321 @@
+
+			<style type="text/css">* {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				text-decoration: none;
+				list-style-type: none;
+			}
+
+			body {
+				margin: 0;
+				
+			}
+
+			/*导航条*/
+			nav {
+				width: 100%;
+				margin: 0px auto;
+				padding: 0px;
+			}
+
+			#nav {
+				width: 100%;
+				background-color: white;
+				height: 65px;
+				color: #FFFFFF;
+				padding: 0px;
+				margin: 0px;
+				border: solid aliceblue 1px;
+				position: fixed;
+				top: 0px;
+				z-index: 999;
+
+			}
+
+			#nav .cart {
+				width: 50px;
+				height: 50px;
+				float: right;
+				padding: 0px;
+				margin: 0px;
+				position: relative;
+				margin-top: 10px;
+				margin-right: 16px;
+
+			}
+
+			#nav .cart a {
+				background: url(./images/1.png) 40px center;
+				width: 40px;
+				height: 40px;
+				display: block;
+
+
+			}
+
+			#nav .user {
+				width: 50px;
+				height: 50px;
+				float: right;
+				padding: 0px;
+				margin: 0px;
+				position: relative;
+				margin-top: 10px;
+				margin-right: 5px;
+
+			}
+
+			#nav .user a {
+				background: url(./images/2.png) 40px center;
+				width: 40px;
+				height: 40px;
+				display: block;
+
+			}
+
+			/*导航按钮*/
+			#menu {
+				cursor: pointer;
+				width: 30px;
+				height: 30px;
+				margin-top: 5px;
+				margin-left: 15px;
+				float: left;
+				font-family: "arial black";
+				position: absolute;
+				background-color: black;
+				border-radius: 50%;
+				transition: all 1s;
+				border: 10px #000000;
+				color: dimgrey;
+				clear: both;
+
+
+			}
+
+			#menu:hover {
+				color: black;
+				font-weight: 800;
+
+			}
+
+			#menu>span {
+				display: block;
+				width: 30px;
+				height: 2px;
+				background-color: #fff;
+				color: #000000;
+				float: left;
+			}
+
+			.openmenu {
+				position: relative;
+
+			}
+
+			.closemenu>span {
+				margin: 4px 0;
+				transition: transform 1s;
+			}
+
+			.openmenu>span {
+				margin: 14px 0;
+				transition: transform 1s;
+			}
+
+			.openmenu>span:first-child {
+				transform: rotate(45deg);
+				position: absolute;
+			}
+
+			.openmenu>span:last-child {
+				opacity: 0;
+			}
+
+			.openmenu>span:nth-child(2) {
+				transform: rotate(-45deg);
+				position: absolute;
+
+			}
+
+			/*菜单列表*/
+			#menu-bar {
+				height: 600px;
+				width: 360px;
+				position: absolute;
+				background-color: white;
+				transition: all 1s;
+				margin: 1px 0 0 0;
+				border-right: solid black 1px;
+				border-bottom: solid black 1px;
+				display: flex;
+				z-index: 999;
+				margin-top: 65px;
+			}
+
+			#menu-bar>ul {
+				width: 600px;
+				margin: 0 auto;
+				padding-top: 50px;
+				
+			}
+
+			#menu-bar>ul::after {
+
+				display: block;
+
+			}
+
+			#menu-bar>ul>a>li {
+				font-family: "verdana, geneva, arial, helvetica, sans-serif";
+				font-weight: 550;
+				font-size: x-large;
+				width: 200px;
+				height: 70px;
+				float: left;
+				cursor: pointer;
+				margin: 0 40px;
+				color: gray;
+				display: block;
+
+			}
+			#menu-bar>ul>a>li:hover {
+				color: #000000;
+				transition: 1.5s;
+			}
+
+			#menu-bar>ul>a>li:hover::after {
+				content: " »";
+				color: #000000;
+				transition: 1.5s;
+
+			}
+
+			/*header*/
+			header {
+				width: 100%;
+				height: 600px;
+			}
+
+			#header {
+				width: 100%;
+				height: 490px;
+				/* border-bottom: solid #696969 1px; */
+
+
+			}
+			#search{
+				color: #808080;
+				font-family: "arial rounded mt bold";
+				font-weight: 600px;
+				margin: 8px 0 60px 50px;
+				cursor: pointer;
+			}
+			#search:hover{
+				color: #000000;
+				
+			}
+			#text {
+				align-items: center;
+				text-align: center;
+				font-size: 35px;
+				margin-top: 225px;
+				margin-left: 70px;
+				/* display: flex; */
+				float: left;
+				font-family: Georgia, 'Times New Roman', Times, serif;
+			}
+
+			#items-box {
+				display: grid;
+				/* place-content: space-around space-around; */
+				row-gap: 50px;
+				column-gap: 50px;
+				height: 2000px;
+				width: 1000px;
+
+				grid-template-rows: 381px 381px 381px 381px;
+				grid-template-columns: 300px 300px 300px 300px;
+				margin-left: 50px;
+				row-gap: 90px;
+			}
+
+			.small-box {
+				/* border: 1px solid #808080; */
+				/* width: 200px; */
+
+				/* height: 300px; */
+				text-align: center;
+			}
+
+			.small-box img {
+				width: 100%;
+			}
+
+			.small-box span {
+
+				font-weight: 300;
+				font-size: 20px;
+				font-family: "arial narrow";
+
+			}
+			.small-box a{
+				color: black;
+				font-family: "arial rounded mt bold";
+				font-size: 14px;
+				font-weight: 600;
+				text-decoration: none;
+			}
+				footer {
+				width: 100%;
+				height: 600px;
+			}
+			
+			#footer {
+				text-align: center;
+				width: 100%;
+				padding: 0px;
+				text-align: center;
+				font-size: 15px;
+				color: black;
+				font-family: "arial rounded mt bold";
+				display: block;
+				position: absolute;
+				
+				margin-top: 1500px;
+				
+			}
+			#backtotop{
+				height: 25px;
+				width: 100px;
+				color: #696969;
+				background-color: ghostwhite;
+				border-radius: 15px;
+				text-align: center;
+				padding: 0;
+				font-weight: 600;
+			margin-left:700px ;
+			
+			}
+			#backtotop a{
+				text-decoration: none;
+			}
+						@font-face {
+				font-family: 'FontAwesome';
+				src: url('fonts/fontawesome-webfont.eot?v=4.7.0');
+				src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+			
+			/*设置栏目图标样式*/
+			[class*="icon-"] {
+				font-family: FontAwesome;
+				font-size: 1.5rem;
+				color: #733F26;
+				display: block;
+				float: left;
+				margin-right: 10px;
+			}
+		</style> 

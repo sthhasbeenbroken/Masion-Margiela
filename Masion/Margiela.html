@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+		<meta charset="utf-8">
+		<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<title>Masion Margiela</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<script src="myjs.js"></script>
+		<script src="newletters.js"></script>
+				<style>
+			@import url("mystyle.css");
+			@import url("subscrib.css");
+		</style>
+		
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				text-decoration: none;
+				list-style-type: none;
+			}
+			
+			body {
+				margin: 0;
+			}
+
+			/*导航条*/
+			nav {
+				width: 100%;
+				margin: 0px auto;
+				padding: 0px;
+			}
+
+			#nav {
+				width: 100%;
+				background-color: white;
+				height: 65px;
+				color: #FFFFFF;
+				padding: 0px;
+				margin: 0px;
+				border: solid aliceblue 1px;
+				position: fixed;
+				top: 0px;
+				z-index: 999;
+			}
+
+			#nav .cart {
+				width: 50px;
+				height: 50px;
+				float: right;
+				padding: 0px;
+				margin: 0px;
+				position: relative;
+				margin-top: 10px;
+				margin-right: 16px;
+
+			}
+
+			#nav .cart a {
+				background: url(./images/1.png) 40px center;
+				width: 40px;
+				height: 40px;
+				display: block;
+
+
+			}
+
+			#nav .user {
+				width: 50px;
+				height: 50px;
+				float: right;
+				padding: 0px;
+				margin: 0px;
+				position: relative;
+				margin-top: 10px;
+				margin-right: 5px;
+
+			}
+
+			#nav .user a {
+				background: url(./images/2.png) 40px center;
+				width: 40px;
+				height: 40px;
+				display: block;
+
+			}
+
+			/*导航按钮*/
+			#menu {
+				cursor: pointer;
+				width: 30px;
+				height: 30px;
+				margin-top: 5px;
+				margin-left: 15px;
+				float: left;
+				font-family: "arial black";
+				position: relative;
+				background-color: black;
+				border-radius: 50%;
+				transition: all 1s;
+				border: 10px #000000;
+				color: dimgrey;
+				clear: both;
+
+
+			}
+
+			#menu:hover {
+				color: black;
+				font-weight: 800;
+
+			}
+
+			#menu>span {
+				display: block;
+				width: 30px;
+				height: 2px;
+				background-color: #fff;
+				color: #000000;
+				float: left;
+			}
+
+			.openmenu {
+				position: relative;
+
+			}
+
+			.closemenu>span {
+				margin: 4px 0;
+				transition: transform 1s;
+			}
+
+			.openmenu>span {
+				margin: 14px 0;
+				transition: transform 1s;
+			}
+
+			.openmenu>span:first-child {
+				transform: rotate(45deg);
+				position: absolute;
+			}
+
+			.openmenu>span:last-child {
+				opacity: 0;
+			}
+
+			.openmenu>span:nth-child(2) {
+				transform: rotate(-45deg);
+				position: absolute;
+
+			}
+
+			/*菜单列表*/
+			#menu-bar {
+				height: 600px;
+				width: 360px;
+				position: relative;
+				background-color: white;
+				transition: all 1s;
+				margin: 1px 0 0 0;
+				border-right: solid black 1px;
+				border-bottom: solid black 1px;
+				display: flex;
+				z-index: 999;
+
+			}
+
+			#menu-bar>ul {
+				width: 600px;
+				margin: 0 auto;
+				padding-top: 50px;
+			}
+
+			#menu-bar>ul::after {
+
+				display: block;
+
+			}
+
+
+			#menu-bar>ul>a>li {
+				font-family: "verdana, geneva, arial, helvetica, sans-serif";
+				font-weight: 550;
+				font-size: x-large;
+				width: 200px;
+				height: 70px;
+				float: left;
+				cursor: pointer;
+				margin: 0 80px;
+				color: gray;
+				display: block;
+
+			}
+
+			#menu-bar>ul>a>li:hover {
+				color: #000000;
+				transition: 1.5s;
+			}
+
+			#menu-bar>ul>a>li:hover::after {
+				content: " »";
+				color: #000000;
+				transition: 1.5s;
+
+			}
+
+			/* 中间内容 */
+			main {
+				width: 100%;
+				height: 1250px;
+				margin: 0px;
+				padding: 0px;
+			}
+
+			.main {
+				width: 1250px;
+				height: 1250px;
+				margin: 0;
+				padding: 0;
+
+			}
+
+			.womennewin {
+				text-align: center;
+				width: 180px;
+				height: 35px;
+				color: black;
+				background-color: white;
+				border: solid gray 1px;
+				font-size: 50px;
+				margin-top: 20px;
+				margin-left: 660px;
+			}
+
+			.womennewin a {
+				display: block;
+				font-size: 15px;
+				font-weight: 600;
+				width: 180px;
+				height: 20px;
+				font-family: "arial narrow";
+				color: black;
+				text-align: center;
+				z-index: 999;
+				margin-top: 9px;
+				background-color: white;
+			}
+
+			.womennewin:hover {
+				color: white;
+				background-color: black;
+				transition: 0.5s;
+			}
+
+			.womennewin a:hover {
+				color: white;
+				background-color: black;
+				transition: 0.5s;
+			}
+
+			.gift {
+				width: 1300px;
+				height: 950px;
+				margin: 0;
+			}
+
+			.giftforhim {
+				width: 550px;
+				height: 800px;
+				margin-left: 150px;
+				margin-top: 80px;
+
+				position: absolute;
+				float: left;
+			}
+
+			.giftforher {
+				width: 550px;
+				height: 800px;
+				margin-top: 80px;
+				margin-left: 805px;
+
+				position: absolute;
+				float: right;
+			}
+
+			.giftforhim a {
+				display: block;
+
+				font-size: 15px;
+				font-weight: 600;
+				padding-top: 5px;
+				width: 180px;
+				height: 20px;
+				font-family: "arial narrow";
+				color: black;
+				text-align: center;
+				z-index: 1;
+				margin-top: 730px;
+				margin-left: 170px;
+				background-color: white;
+				border: solid gray 1px;
+			}
+
+			.giftforhim img:hover {
+				opacity: 100%;
+				transition: 1s;
+			}
+
+			.giftforhim img {
+				opacity: 80%;
+			}
+
+			.giftforhim a:hover {
+				color: white;
+				background-color: black;
+				transition: 0.5s;
+			}
+
+			.giftforher a {
+				display: block;
+				font-size: 15px;
+				font-weight: 600;
+				padding-top: 5px;
+				width: 180px;
+				height: 20px;
+				font-family: "arial narrow";
+				color: black;
+				text-align: center;
+				z-index: 1;
+				margin-top: 730px;
+				margin-left: 200px;
+				background-color: white;
+				border: solid gray 1px;
+			}
+
+			.giftforher a:hover {
+				color: white;
+				background-color: black;
+				transition: 0.5s;
+			}
+
+			.giftforher img:hover {
+				opacity: 100%;
+				transition: 1s;
+			}
+
+			.giftforher img {
+				opacity: 80%;
+			}
+
+			.mmsix {
+				margin: 0;
+				padding: 0;
+				width: 1300px;
+				height: 700px;
+
+			}
+
+			.mmsix a {
+				display: block;
+				font-size: 20px;
+				font-weight: 900;
+				width: 200px;
+				height: 30px;
+				font-family: "arial narrow";
+				color: black;
+				text-align: center;
+				z-index: 1;
+				margin-top: 30px;
+				margin-left: 650px;
+				background-color: white;
+				border: solid gray 1px;
+			}
+
+			.mmsix a:hover {
+				color: white;
+				background-color: black;
+				transition: 0.5s;
+			}
+
+			/*页脚*/
+			footer {
+				width: 100%;
+				height: 400px;
+			}
+
+			#footer {
+				width: 100%;
+				height: 50px;
+				text-align: center;
+				font-size: 15px;
+				color: black;
+				font-family: "arial rounded mt bold";
+				display: block;
+				position: absolute;
+				margin-top: 1500px;
+				margin-bottom: 0;
+			}
+
+			@font-face {
+				font-family: 'FontAwesome';
+				src: url('fonts/fontawesome-webfont.eot?v=4.7.0');
+				src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+
+			/*设置栏目图标样式*/
+			[class*="icon-"] {
+				font-family: FontAwesome;
+				font-size: 1.5rem;
+				color: #733F26;
+				display: block;
+				float: left;
+				margin-right: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<nav>
+			<div id="nav">
+				<div id="menu" class="closemenu">
+					<span></span>
+					<span></span>
+					<span></span>
+					Mune
+				</div>
+				<div class="cart">
+					<a href="#"></a>
+				</div>
+				<div class="user">
+					<a href="#"></a>
+				</div>
+				<img src="images/DesignerBios_Logo_Responsive_Maison-Margiela_2x.jpg" style="height: 65px;margin-left: 200px;width:300px;display:flex;margin-left: 598px;" />
+				<div id="menu-bar" style="left: -700px;">
+					<ul>
+						<a href="shows.html">
+							<li>Shows</li>
+						</a>
+						<a href="womensnewin.html">
+							<li>Womenswear</li>
+						</a>
+						<a href="mensnewin.html">
+							<li>Menswear</li>
+						</a>
+						<a href="mm6.html">
+							<li style="font-weight: 800;">MM⑥</li>
+						</a>
+						<!-- <a href="#"><li>Gift Guide</li></a> -->
+						<a href="#">
+							<li>Sale</li>
+						</a>
+						<a href="#">
+							<li style="font-weight: 100;">Follow us</li>
+						</a>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<main>
+			<div class="main">
+				<!-- 第一块 -->
+				<a href="womensnewin.html">
+				<img src="images/hp_bloc1_decB_dt.png" style="position:relative; display:block;margin-left: 100px;width:1300px;margin-top:65px;position: absolute;" />
+				</a>
+				<div class="womennewin" style="margin-top: 820px;position: absolute;">
+					<a href="womensnewin.html">WOMEN'S NEW IN</a>
+				</div>
+				<!-- 第二块 -->
+				<div class="gift">
+
+					<div class="giftforhim" style="margin-top: 900px;">
+						<img src="images/hp_bloc2a_decB.png" style="width: 550px;height: 700px;display: flex;position: absolute;" />
+						<a href="mensnewin.html">GIFTS FOR HIM</a>
+					</div>
+
+					<div class="giftforher" style="margin-top: 900px;">
+						<img src="images/hp_bloc2b_novB.png" style="width: 550px;height: 700px;display: flex;position: absolute;">
+						<a href="womensnewin.html">GIFTS FOR HER</a>
+					</div>
+				</div>
+				<!-- 第三块 -->
+				<div class="mmsix" style="margin-top: 800px;">
+					<img src="images/hp_bloc3_decB_dt.jpg" style="display:flex; width: 1300px;height: 700px;margin-left: 100px;position: relative;">
+					<a href="mm6.html">MM⑥</a>
+				</div>
+
+			</div>
+		</main>
+
+		<footer>
+			<div id="backtotop" style="margin-top: 1300px;">
+				<a href="#">Back To Top</a>
+			</div>
+			<div id="subscribe" style="margin-left: 610px;margin-top: 10px;">
+				Subscribe to our newletters
+				
+			</div>
+				<div id="subtable" style="margin-top: 10px;" > 
+				<p>Your email adress</p>
+				<form >
+					<input style="border:1px solid black; type="text" /><br /><br />
+					<input type="radio" value="male" style="border:1px solid black;"/>Male   
+					<input type="radio" value="female"/>Female
+					</input>
+					<p style="width: 700px;font-size:15px; margin-left: 400px;">Receive tailor-made attentions.
+
+I confirm I am over 18 years old and I have read the <a href="#" style="font-weight:600"> Information on Privacy</a> provided by <br> Margiela Group S.A.S.U., local subsidiary and relevant parent company OTB S.p.a. in accordance with local applicable laws.<br>
+<br>
+I understand that providing the personal data for profiling and marketing purposes is optional and:</p>
+<br>
+<input type="checkbox" value="agree">
+I agree to the use of the Personal Data for marketing purposes (newsletters, news and promotions)<br> in accordance to letter b. paragraph 2 of <a href="#" style="font-weight:600"> Information on Privacy</a>
+<br>
+<input type="submit" value="Submit" style="cursor:pointer;margin-top:10px">
+				</form>
+				</div>
+			<div id="footer" style="margin-top: 50px;">
+				Maison Margiela is part of OTB - Careers Copyright © 2000-2020 YOOX NET-A-PORTER GROUP S.p.A. - All Rights -
+				Reserved
+			</div>
+		</footer>
+	</body>
+</html>
